@@ -24,9 +24,11 @@ const Form = () => {
 	return (
 		<div>
 			<form name="rsvp" data-netlify="true" onSubmit={handleSubmit}>
+        <input type="hidden" name="form-name" value="rsvp" />
+
 				<p>
 					<label>
-              Your Name: <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
+              Your Name: <input type="text" name="attendeeName" value={name} onChange={(e) => setName(e.target.value)} />
 					</label>
 				</p>
 
