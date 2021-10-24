@@ -23,6 +23,10 @@ const Us = styled.aside`
     max-height: 600px;
     filter: grayscale(35%);
   }
+
+  @media screen and (max-width: 1400px) {
+    display: none;
+  }
 `
 
 const Wreath = styled.div`
@@ -33,6 +37,11 @@ const Wreath = styled.div`
   img {
     max-width: 200px;
   }
+
+  @media screen and (max-width: 1400px) {
+    right: 23px;
+    bottom: -58px;
+  }
 `
 
 const Brand = styled.div`
@@ -42,6 +51,12 @@ const Brand = styled.div`
 
   img {
     max-width: 300px;
+  }
+
+  @media screen and (max-width: 1400px) {
+    img {
+      max-width: 200px;
+    }
   }
 `
 
