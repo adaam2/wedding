@@ -13,12 +13,12 @@ const NavEl = styled.nav`
     display: inline-flex;
 
     li {
-      margin-right: 10px;
+      margin-right: 18px;
       font-size: 18px;
 
       a {
         text-decoration: none;
-        color: #b0bea7;
+        color: #f3a6cc;
 
         &:hover {
           color: ${darken(0.25)('#b0bea7')}
@@ -40,10 +40,10 @@ const Nav : React.FC<NavProps> = () => {
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="/rsvp">RSVP</a>
+          <a href="/info">Info</a>
         </li>
         <li>
-          <a href="/info">Info</a>
+          <a href="/rsvp">RSVP</a>
         </li>
       </ul>
     </NavEl>

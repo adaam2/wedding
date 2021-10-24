@@ -53,14 +53,14 @@ const Form = () => {
 
       <FormRow>
         <Label text="Dietary requirements:">
-          <TextField textarea placeholder="Enter any dietary requirements here" name="dietaryRequirements" onChange={(e) => setDietaryRequirements(e.currentTarget.value)} style={{ minWidth: '500px' }} value={dietaryRequirements} />
+          <TextField textarea placeholder="Enter any dietary requirements here" name="dietaryRequirements" onChange={(e) => setDietaryRequirements(e.currentTarget.value)} value={dietaryRequirements} />
         </Label>
       </FormRow>
 
       <div data-netlify-recaptcha="true"></div>
 
       <FormRow>
-        <SubmitButton text="Save" />
+        <SubmitButton text="Submit" />
       </FormRow>
   </form>
 	)

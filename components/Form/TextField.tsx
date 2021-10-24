@@ -17,6 +17,7 @@ const El = styled.input`
  color: ${({ theme }) => theme.text};
   font-family: inherit;
   font-size: 18px;
+  min-width: 400px;
 
   &:focus {
     outline-color: #b0bea7;

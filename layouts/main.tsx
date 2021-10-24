@@ -10,8 +10,15 @@ const Container = styled.div`
   margin-left: 35px;
   margin-top: 35px;
   flex: 1;
-  max-height: 700px;
   border: 1px solid #e2e2e2;
+
+  @media screen and (max-width: 1400px) {
+    margin-left: 0;
+    position: relative;
+    left: -130px;
+    top: 80px;
+    border: none;
+  }
 `
 
 const Us = styled.aside`
@@ -39,8 +46,7 @@ const Wreath = styled.div`
   }
 
   @media screen and (max-width: 1400px) {
-    right: 23px;
-    bottom: -58px;
+    display: none;
   }
 `
 
@@ -50,12 +56,14 @@ const Brand = styled.div`
   top: -60px;
 
   img {
-    max-width: 300px;
+    max-width: 200px;
   }
 
   @media screen and (max-width: 1400px) {
+    margin-left: 20px;
+
     img {
-      max-width: 200px;
+      max-width: 120px;
     }
   }
 `
