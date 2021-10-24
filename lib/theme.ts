@@ -7,4 +7,13 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Baskervville', serif;
   }
+
+  body {
+    background: white;
+  }
 `
+
+export default {
+  text: '#2a2a2a',
+  background: 'white'
+}

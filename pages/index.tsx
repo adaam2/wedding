@@ -1,45 +1,34 @@
-import styled from 'styled-components'
+import Head from 'next/head'
 
-import Form from '@components/Form'
-
-const Container = styled.div`
-  display: flex;
-  height: 100%;
-  flex-flow: row;
-  width: 100%;
-  height: 400px;
-  margin: 5em;
-  border: 1px solid #e2e2e2;
-`
-
-const Us = styled.aside`
-  display: flex;
-  background-image: url(/us.jpg);
-  background-size: contain;
-  clip-path: polygon(0 0, 0 100%, 100% 0);
-  background-repeat: no-repeat;
-  align-self: stretch;
-  height: 100%;
-  flex: 1;
-`
-
-const Content = styled.article`
-  background: white;
-  padding: 1.5em;
-  flex: 4;
-  margin: 150px 0;
-  min-width: 750px;
-  height: 100%;
-`
+import MainLayout from '../layouts/main'
 
 export default function Home() {
 	return (
-		<Container>
-			<Us />
+		<MainLayout>
+      <Head>
+        <title>
+          The wedding of AJB + AJT - Home
+        </title>
+      </Head>
 
-			<Content>
-				<Form />
-			</Content>
-		</Container>
+      <p>
+        Adam Bull & Alice Judge-Talbot, together with their families, request the pleasure of your company on their wedding day, the 19th May 2022, for a ceremony at 12.45pm.
+      </p>
+
+      <p>
+        at:
+      </p>
+
+      <p>
+        The Italian Villa<br/>
+        Compton Acres, Poole, BH13 7ES.
+      </p>
+      <p>
+        Drinks, reception, and dancing to follow.
+      </p>
+      <p>
+        Carriages at 11.30pm
+      </p>
+    </MainLayout>
 	)
 }
