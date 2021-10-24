@@ -23,7 +23,7 @@ const Form = () => {
 
 	return (
 		<div>
-			<form name="rsvp" data-netlify="true" onSubmit={handleSubmit}>
+			<form name="rsvp" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit}>
         <input type="hidden" name="form-name" value="rsvp" />
 
 				<p>
