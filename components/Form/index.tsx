@@ -22,21 +22,11 @@ const Form = () => {
 	}
 
 	return (
-		<div>
-			<form name="rsvp" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit}>
-        <input type="hidden" name="form-name" value="rsvp" />
-
-				<p>
-					<label>
-              Your Name: <input type="text" name="attendeeName" value={name} onChange={(e) => setName(e.target.value)} />
-					</label>
-				</p>
-
-				<p>
-					<button type="submit">Send</button>
-				</p>
-			</form>
-		</div>
+		<form data-netlify="true" name="rsvp" method="post" onSubmit={handleSubmit}>
+      <input type="hidden" name="form-name" value="rsvp" />
+      <input name="attendeeNames" type="text" onChange={(e) => setName(e.target.value)} />
+      <input type="submit"/>
+  </form>
 	)
 }
 
