@@ -10,7 +10,7 @@ const Container = styled.div`
   margin-left: 35px;
   margin-top: 35px;
   flex: 1;
-  border: 1px solid #e2e2e2;
+  border: 1px solid #f2f2f2;
 
   @media screen and (max-width: 1400px) {
     margin-left: 0;

@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <p>
-        Adam Bull & Alice Judge-Talbot, together with their families, request the pleasure of your company on their wedding day, the 19th May 2022, for a ceremony at 12.45pm.
+        Adam Bull & Alice Judge-Talbot, together with their families, request the pleasure of your company on their wedding day, the <b>19th May 2022</b>, for a ceremony at <b>12.45pm</b>.
       </p>
 
       <p>
@@ -20,11 +20,11 @@ export default function Home() {
       </p>
 
       <p>
-        The Italian Villa<br/>
-        Compton Acres, Poole, BH13 7ES.
+        <b>The Italian Villa<br/>
+        Compton Acres, Poole, BH13 7ES.</b>
       </p>
       <p>
-        Drinks, reception, and dancing to follow.
+        Drinks, dinner, and dancing to follow.
       </p>
       <p>
         Carriages at 11.30pm

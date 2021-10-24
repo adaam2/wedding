@@ -1,4 +1,31 @@
 import Head from 'next/head'
+import { darken } from 'polished'
+import styled from 'styled-components'
+
+const InfoElement = styled.div`
+  a {
+    color: #f3a6cc;
+    text-decoration: none;
+
+    &:hover {
+      color: ${darken(0.5)('#f3a6cc')};
+    }
+  }
+  ul {
+    li {
+      margin: 8px 0;
+
+      a {
+        color: #f3a6cc;
+        text-decoration: none;
+
+        &:hover {
+          color: ${darken(0.5)('#f3a6cc')};
+        }
+      }
+    }
+  }
+`
 
 import MainLayout from '../layouts/main'
 
@@ -11,6 +38,7 @@ export default function Info() {
         </title>
       </Head>
 
+      <InfoElement>
       <h2>Guest information:</h2>
 
       <h3>Accomodation</h3>
@@ -29,7 +57,6 @@ export default function Info() {
       </ul>
 
       <h3>Taxis</h3>
-
       <p>We recommend United Taxis on  01202 556677, otherwise Uber operate throughout Poole and Bournemouth.</p>
 
       <h3>Parking</h3>
@@ -42,7 +69,7 @@ export default function Info() {
       <p>The Italian Villa is situated within Compton Acres, which is highly regarded as one of the most important historic gardens in England. Dating back to 1924, its ten acres of beautifully-landscaped Grade II listed horticulture, including the famous Italian and Japanese gardens, will be available for our guests to enjoy throughout the day.</p>
 
       <h3>RSVP</h3>
-      <p>Please respond by 15.01.22</p>
+      <p>Please respond by 15.01.22. You can RSVP <a href="/rsvp">here</a>.</p>
 
       <h3>Local Area</h3>
       <p>The Italian Villa is situated close to Poole Harbour and Dorset’s Jurassic Coastline’s natural beauty. To the north you have the rolling hills and quaint villages of the Dorset countryside. Heading east takes you to the ancient woodlands of the New Forest, its varied wildlife and the Isle of Wight, a short ferry crossing over Solent water. Southwards we have the 7 miles of sandy beaches that is the expanse of Poole Bay, and West takes you into the World Heritage site of the Dorset Jurassic coast with its many cliff top walks, small bays and years of geological history.</p>
@@ -50,6 +77,7 @@ export default function Info() {
       <h3>Further information</h3>
       <p>For any further information please email <a href="mailto:alice@the-bulls.uk">alice@the-bulls.uk</a></p>
 
+      </InfoElement>
     </MainLayout>
 	)
 }
