@@ -23,7 +23,7 @@ const Form = () => {
 
 	return (
 		<div>
-			<form onSubmit={handleSubmit}>
+			<form data-netlify="true" onSubmit={handleSubmit}>
 				<p>
 					<label>
               Your Name: <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
