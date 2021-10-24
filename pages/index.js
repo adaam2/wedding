@@ -35,13 +35,13 @@ const Content = styled.article`
 `
 
 export default function Home() {
-  return (
-    <Container>
-      <Us />
+	return (
+		<Container>
+			<Us />
 
-      <Content>
-        <Form />
-      </Content>
-    </Container>
-  )
+			<Content>
+				<Form />
+			</Content>
+		</Container>
+	)
 }
