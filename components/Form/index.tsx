@@ -10,15 +10,15 @@ const Form = () => {
 	const [name, setName] = useState('')
 
 	const handleSubmit = (e: React.FormEvent) => {
-		fetch('/', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: encode({ name })
-		})
-			.then(() => alert('Success!'))
-			.catch(error => alert(error))
-
 		e.preventDefault()
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": 'rsvp',
+        name
+      })
+    }).then(() => alert('Success')).catch(error => alert(error))
 	}
 
 	return (
