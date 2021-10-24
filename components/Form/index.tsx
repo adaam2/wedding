@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 
-const encode = (data) => {
+const encode = (data: Record<string, string>) => {
 	return Object.keys(data)
 		.map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
 		.join('&')
 }
 
-const Form = props => {
+const Form = () => {
 	const [name, setName] = useState('')
 
-	const handleSubmit = e => {
+	const handleSubmit = (e: React.FormEvent) => {
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -37,10 +36,6 @@ const Form = props => {
 			</form>
 		</div>
 	)
-}
-
-Form.propTypes = {
-
 }
 
 export default Form
