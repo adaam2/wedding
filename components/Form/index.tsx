@@ -55,7 +55,7 @@ const Form = () => {
   }
 
 	return (
-		<form data-netlify-recaptcha="true" netlify-honeypot="bot-field" data-netlify="true" name="rsvp" method="post" onSubmit={handleSubmit}>
+		<form netlify-honeypot="bot-field" data-netlify="true" name="rsvp" method="post" onSubmit={handleSubmit}>
       <p style={{ display: 'none' }}>
         <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
       </p>
@@ -78,8 +78,6 @@ const Form = () => {
           <TextField textarea placeholder="Enter any dietary requirements here" name="dietaryRequirements" onChange={(e) => setDietaryRequirements(e.currentTarget.value)} value={dietaryRequirements} />
         </Label>
       </FormRow>
-
-      <div data-netlify-recaptcha="true"></div>
 
       <FormRow>
         <SubmitButton text="Submit" />
