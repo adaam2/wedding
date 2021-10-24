@@ -55,7 +55,10 @@ const Form = () => {
   }
 
 	return (
-		<form data-netlify-recaptcha="true" data-netlify="true" name="rsvp" method="post" onSubmit={handleSubmit}>
+		<form data-netlify-recaptcha="true" netlify-honeypot="bot-field" data-netlify="true" name="rsvp" method="post" onSubmit={handleSubmit}>
+      <p style={{ display: 'none' }}>
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      </p>
       <input type="hidden" name="form-name" value="rsvp" />
 
       <FormRow>
