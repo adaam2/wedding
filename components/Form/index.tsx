@@ -36,7 +36,7 @@ const Form = () => {
 	}
 
 	return (
-		<form data-netlify="true" name="rsvp" method="post" onSubmit={handleSubmit}>
+		<form data-netlify-recaptcha="true" data-netlify="true" name="rsvp" method="post" onSubmit={handleSubmit}>
       <input type="hidden" name="form-name" value="rsvp" />
 
       <FormRow>
@@ -56,6 +56,8 @@ const Form = () => {
           <TextField textarea placeholder="Enter any dietary requirements here" name="dietaryRequirements" onChange={(e) => setDietaryRequirements(e.currentTarget.value)} style={{ minWidth: '500px' }} value={dietaryRequirements} />
         </Label>
       </FormRow>
+
+      <div data-netlify-recaptcha="true"></div>
 
       <FormRow>
         <SubmitButton text="Save" />
