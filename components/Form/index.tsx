@@ -16,10 +16,21 @@ const FormRow = styled.div`
   margin: 10px 0;
 `
 
+const STORAGE_KEY = 'wedding.the-bulls.uk-submission'
+
 const Form = () => {
+  const [success, setSuccess] = useState(false)
 	const [name, setName] = useState('')
   const [rsvp, setRsvp] = useState('')
   const [dietaryRequirements, setDietaryRequirements] = useState('')
+
+  const handleSubmission = () => {
+    localStorage.setItem(STORAGE_KEY, 'true')
+
+    setSuccess(true);
+  }
+
+  const hasStorageItem = typeof localStorage !== 'undefined' && localStorage.getItem(STORAGE_KEY) === 'true'
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault()
@@ -32,8 +43,16 @@ const Form = () => {
         dietaryRequirements,
         rsvp
       })
-    }).then(() => alert('Success')).catch(error => alert(error))
+    }).then(() => handleSubmission()).catch(error => alert(error))
 	}
+
+  if (hasStorageItem || success) {
+    return (
+      <div>
+        Thank you for confirming your attendance.
+      </div>
+    )
+  }
 
 	return (
 		<form data-netlify-recaptcha="true" data-netlify="true" name="rsvp" method="post" onSubmit={handleSubmit}>
@@ -41,7 +60,7 @@ const Form = () => {
 
       <FormRow>
         <Label text="Attendee names:">
-          <TextField placeholder="Enter your name here" name="attendeeNames" onChange={(e) => setName(e.currentTarget.value)} value={name} />
+          <TextField required minLength={1} placeholder="Enter guest names here" name="attendeeNames" onChange={(e) => setName(e.currentTarget.value)} value={name} />
         </Label>
       </FormRow>
 

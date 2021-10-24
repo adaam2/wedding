@@ -5,6 +5,7 @@ const NavEl = styled.nav`
   margin-left: auto;
   margin-top: 42px;
   margin-bottom: 32px;
+  z-index: 1;
 
   ul {
     list-style: none;

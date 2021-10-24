@@ -15,5 +15,6 @@ export const GlobalStyle = createGlobalStyle`
 
 export default {
   text: '#2a2a2a',
-  background: 'white'
+  background: 'white',
+  mobileBreakpoint: '1200px',
 }

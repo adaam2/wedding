@@ -18,8 +18,8 @@ const RadioButtonList : React.FC<RadioButtonListProps> = ({ options, onChange, n
   return (
     <Wrap>
       {options.map((opt, idx) => (
-        <Option>
-          <input type="radio" name={name} id={idx.toString()} onChange={(e) => onChange(opt)} checked={value === opt} /> <label htmlFor={idx.toString()}>{opt}</label>
+        <Option key={opt}>
+          <input required type="radio" name={name} id={idx.toString()} onChange={(e) => onChange(opt)} checked={value === opt} /> <label htmlFor={idx.toString()}>{opt}</label>
         </Option>
       ))}
     </Wrap>

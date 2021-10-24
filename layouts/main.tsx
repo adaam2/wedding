@@ -10,13 +10,10 @@ const Container = styled.div`
   margin-left: 35px;
   margin-top: 35px;
   flex: 1;
-  border: 1px solid #f2f2f2;
 
-  @media screen and (max-width: 1400px) {
-    margin-left: 0;
-    position: relative;
-    left: -130px;
-    top: 80px;
+  @media screen and (max-width: ${({ theme }) => theme.mobileBreakpoint}) {
+    margin: 0;
+    margin-top: -75px;
     border: none;
   }
 `
@@ -31,7 +28,7 @@ const Us = styled.aside`
     filter: grayscale(35%);
   }
 
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: ${({ theme }) => theme.mobileBreakpoint}) {
     display: none;
   }
 `
@@ -45,7 +42,7 @@ const Wreath = styled.div`
     max-width: 200px;
   }
 
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: ${({ theme }) => theme.mobileBreakpoint}) {
     display: none;
   }
 `
@@ -59,7 +56,7 @@ const Brand = styled.div`
     max-width: 200px;
   }
 
-  @media screen and (max-width: 1400px) {
+  @media screen and (max-width: ${({ theme }) => theme.mobileBreakpoint}) {
     margin-left: 20px;
 
     img {
@@ -84,11 +81,19 @@ const InnerWrapper = styled.div`
   display: flex;
   flex-flow: column;
   max-width: 90%;
+
+  @media screen and (max-width: ${({ theme }) => theme.mobileBreakpoint}) {
+    max-width: initial;
+  }
 `
 
 const ContentWrapper = styled.div`
   display: flex;
   flex-flow: row;
+
+  @media screen and (max-width: ${({ theme }) => theme.mobileBreakpoint}) {
+    flex-flow: column;
+  }
 `
 
 interface MainProps {

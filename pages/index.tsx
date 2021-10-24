@@ -27,7 +27,10 @@ export default function Home() {
         Drinks, dinner, and dancing to follow.
       </p>
       <p>
-        Carriages at 11.30pm
+        Carriages at <b>11.30pm</b>.
+      </p>
+      <p>
+        We are looking forward to seeing you!
       </p>
     </MainLayout>
 	)

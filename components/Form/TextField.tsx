@@ -4,6 +4,8 @@ import styled from 'styled-components'
 interface TextFieldProps {
   value: string
   name: string
+  minLength?: number
+  required?: boolean
   textarea?: boolean
   placeholder: string
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -25,9 +27,9 @@ const El = styled.input`
   }
 `
 
-const TextField : React.FC<TextFieldProps> = ({ name, value, placeholder, textarea = false, onChange, ...rest }) => {
+const TextField : React.FC<TextFieldProps> = ({ name, value, placeholder, minLength = 1, required = false, textarea = false, onChange, ...rest }) => {
   return (
-    <El as={textarea ? 'textarea' : 'input'} name={name} placeholder={placeholder} value={value} {...rest} onChange={onChange} />
+    <El minLength={minLength} required={required} as={textarea ? 'textarea' : 'input'} name={name} placeholder={placeholder} value={value} {...rest} onChange={onChange} />
   )
 }
 

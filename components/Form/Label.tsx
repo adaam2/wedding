@@ -10,6 +10,7 @@ const El = styled.label`
 
 const LabelText = styled.span`
   margin-bottom: 15px;
+  font-weight: bold;
 `
 
 const Children = styled.div``
