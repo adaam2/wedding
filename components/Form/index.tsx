@@ -28,7 +28,9 @@ const Form = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": 'rsvp',
-        attendeeNames: name
+        attendeeNames: name,
+        dietaryRequirements,
+        rsvp
       })
     }).then(() => alert('Success')).catch(error => alert(error))
 	}
