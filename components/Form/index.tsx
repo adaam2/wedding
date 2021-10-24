@@ -13,7 +13,7 @@ const Form = () => {
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: encode({ 'form-name': 'rsvp', name })
+			body: encode({ name })
 		})
 			.then(() => alert('Success!'))
 			.catch(error => alert(error))
@@ -23,7 +23,7 @@ const Form = () => {
 
 	return (
 		<div>
-			<form data-netlify="true" onSubmit={handleSubmit}>
+			<form name="rsvp" data-netlify="true" onSubmit={handleSubmit}>
 				<p>
 					<label>
               Your Name: <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
