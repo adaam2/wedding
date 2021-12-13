@@ -26,6 +26,8 @@ const Us = styled.aside`
   img {
     max-height: 600px;
     filter: grayscale(35%);
+
+
   }
 
   @media screen and (max-width: ${({ theme }) => theme.mobileBreakpoint}) {
@@ -67,7 +69,7 @@ const Brand = styled.div`
 
 const Content = styled.article`
   font-size: 18px;
-  padding: 1.5em;
+  padding: 0 1.5em;
   flex: 4;
 `
 
@@ -117,7 +119,7 @@ const Main : React.FC<MainProps> = ({ children }) => {
             </Content>
 
             <Us>
-              <img src="/us.jpg" />
+              <img src="/us.jpeg" />
             </Us>
           </Container>
         </ContentWrapper>
