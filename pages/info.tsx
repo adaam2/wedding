@@ -77,7 +77,7 @@ export default function Info() {
       <p>The Italian Villa is situated close to Poole Harbour and Dorset’s Jurassic Coastline’s natural beauty. To the north you have the rolling hills and quaint villages of the Dorset countryside. Heading east takes you to the ancient woodlands of the New Forest, its varied wildlife, and the Isle of Wight, a short ferry crossing over Solent water. Southwards we have the 7 miles of sandy beaches that is the expanse of Poole Bay, and West takes you into the World Heritage site of the Dorset Jurassic coast with its many cliff top walks, small bays and years of geological history.</p>
 
       <h3>RSVP</h3>
-      <p>Please respond by 15.01.22. You can RSVP <a href="/rsvp">here</a>.</p>
+      <p>Please respond by 31.01.22. You can RSVP <a href="/rsvp">here</a>.</p>
 
       <h3>Further information</h3>
       <p>For any further information please email <a href="mailto:adamandalice@the-bulls.uk">adamandalice@the-bulls.uk</a></p>
